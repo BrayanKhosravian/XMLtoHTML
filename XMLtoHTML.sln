@@ -5,6 +5,14 @@ VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLtoHTML", "XMLtoHTML\XMLtoHTML.csproj", "{F59DB171-D723-4395-9A5A-DC3293D8BB2F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercise", "Exercise", "{8D68974B-D09D-439A-BFCB-CCC5826DEF58}"
+	ProjectSection(SolutionItems) = preProject
+		Exercise\exercise.pdf = Exercise\exercise.pdf
+		Exercise\Sprint_11945.xml = Exercise\Sprint_11945.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLtoHTML_ClassLibrary", "XMLtoHTML_ClassLibrary\XMLtoHTML_ClassLibrary.csproj", "{2BBE3BB6-D197-4081-B82A-0D3A89C2B18E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +23,10 @@ Global
 		{F59DB171-D723-4395-9A5A-DC3293D8BB2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F59DB171-D723-4395-9A5A-DC3293D8BB2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F59DB171-D723-4395-9A5A-DC3293D8BB2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BBE3BB6-D197-4081-B82A-0D3A89C2B18E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BBE3BB6-D197-4081-B82A-0D3A89C2B18E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BBE3BB6-D197-4081-B82A-0D3A89C2B18E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BBE3BB6-D197-4081-B82A-0D3A89C2B18E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
