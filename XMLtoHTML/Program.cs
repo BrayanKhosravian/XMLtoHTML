@@ -1,5 +1,7 @@
+using System.Collections.Generic;
 using XMLtoHTML.Services;
 using XMLtoHTML_ClassLibrary;
+using XMLtoHTML_ClassLibrary.Models;
 using XMLtoHTML_ClassLibrary.Services;
 
 namespace XMLtoHTML
@@ -15,10 +17,14 @@ namespace XMLtoHTML
             // string path = inputManager.GetPath("Enter a path of a .xml file! Format: X:\\..\\..\\filename.xml \n");
 
             XmlDeserializer xmlDeserializer = new XmlDeserializer();
-            xmlDeserializer.Run(path);
+            List<ReleaseNote> releaseNotes = xmlDeserializer.Deserialize(path);
+
+            HtmlSerializer htmlSerializer = new HtmlSerializer();
+            htmlSerializer.Serialize(releaseNotes);
            
         }
     }
 
+    
    
 }
