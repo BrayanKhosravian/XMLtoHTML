@@ -11,9 +11,9 @@ namespace XMLtoHTML
         {
             IInputManager inputManager = new InputManager();
 
-            string path = @"D:\_Projects\_Visual Studio Projects\ConsoleApps\XMLtoHTML\Exercise\Sprint_11945.xml"; // Debug
+            // string path = @"D:\_Projects\_Visual Studio Projects\ConsoleApps\XMLtoHTML\Exercise\Sprint_11945.xml"; // Debug
 
-            // string path = inputManager.GetPath("Enter a path of a .xml file! Format: X:\\..\\..\\filename.xml \n");
+            string path = inputManager.GetPath("Enter a path of a .xml file! Format: X:\\..\\..\\filename.xml \n");
 
             HtmlSerializer htmlSerializer = new HtmlSerializer();
             XmlDeserializer xmlDeserializer = new XmlDeserializer();
