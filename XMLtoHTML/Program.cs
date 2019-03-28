@@ -1,8 +1,7 @@
-using System.Collections.Generic;
 using XMLtoHTML.Services;
-using XMLtoHTML_ClassLibrary;
-using XMLtoHTML_ClassLibrary.Models;
-using XMLtoHTML_ClassLibrary.Services;
+using XMLtoHTML_ClassLibrary.Converters;
+using XMLtoHTML_ClassLibrary.Deserializers;
+using XMLtoHTML_ClassLibrary.Serializers;
 
 namespace XMLtoHTML
 {
@@ -12,15 +11,15 @@ namespace XMLtoHTML
         {
             IInputManager inputManager = new InputManager();
 
-            string path = @"D:\_Projects\_Visual Studio Projects\ConsoleApps\XMLtoHTML\Exercise\Sprint_11945.xml";
+            string path = @"D:\_Projects\_Visual Studio Projects\ConsoleApps\XMLtoHTML\Exercise\Sprint_11945.xml"; // Debug
 
             // string path = inputManager.GetPath("Enter a path of a .xml file! Format: X:\\..\\..\\filename.xml \n");
 
-            XmlDeserializer xmlDeserializer = new XmlDeserializer();
-            List<ReleaseNote> releaseNotes = xmlDeserializer.Deserialize(path);
-
             HtmlSerializer htmlSerializer = new HtmlSerializer();
-            htmlSerializer.Serialize(releaseNotes);
+            XmlDeserializer xmlDeserializer = new XmlDeserializer();
+            XmlToHtmlConverter xmlToHtmlConverter = new XmlToHtmlConverter(htmlSerializer, xmlDeserializer);
+
+            xmlToHtmlConverter.Convert(path);
            
         }
     }

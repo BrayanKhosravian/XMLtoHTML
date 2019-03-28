@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
 using XMLtoHTML_ClassLibrary.Models;
 
-namespace XMLtoHTML_ClassLibrary.Services
+namespace XMLtoHTML_ClassLibrary.Deserializers
 {
-    public class XmlDeserializer
+    public class XmlDeserializer : IXmlDeserializer
     {
         public List<ReleaseNote> Deserialize(string path)
         {
